@@ -9,6 +9,7 @@ import 'rxjs/Rx';
 @Injectable()
 export class AuthenticationService {
   private api_url = 'https://prue-bucketlists.herokuapp.com/';
+  public email = '';
 
   constructor(private _http: Http, private jwtHelper: JwtHelper) { }
 
