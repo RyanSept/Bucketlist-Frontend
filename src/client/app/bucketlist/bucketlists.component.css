@@ -1,0 +1,129 @@
+.before-bucketlists h1, h2{
+    font-weight: 100;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.bucketlists{
+    margin-bottom: 50px;
+}
+.bucketlist {
+    width: 20vw;
+    height: 240px;
+    margin-right: 40px;
+    margin-top: 25px;
+    background-color: white;
+    box-shadow: 0 20px 20px rgba(0,0,0,.1);
+    transition: transform .3s ease-out;
+    cursor: pointer;
+}
+
+.col-sm-3.bucketlist:hover{
+     box-shadow: 0 20px 20px rgba(0,0,0,.2);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    z-index:5;
+}
+@media (max-width: 480px){
+    .bucketlist {
+        width: 90%;
+    }
+}
+
+.bucketlist:nth-of-type(odd){
+    transform: rotate(-5deg);
+}
+.bucketlist:nth-of-type(even){
+    transform: rotate(5deg);
+}
+
+.bucketlist-name{
+    margin-top: 35px;
+}
+.bucketlist-name, .bucketlist-date, .bucketlist-item-count, .item-count-title{
+    color: dimgray;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+}   
+
+.bucketlist-item-count{
+    font-size: 60px;
+    font-family: Helvetica;
+    margin-bottom: 0px;
+    margin-top: 0.78em
+}
+
+.bucketlist:nth-of-type(3n+1) .bucketlist-item-count{
+    color: #FFAA80;
+}
+.bucketlist:nth-of-type(3n+2) .bucketlist-item-count{
+    color: #FF8396;
+}
+.bucketlist:nth-of-type(3n+3) .bucketlist-item-count{
+    color: #FFA6E6;
+}
+
+#bucketlist-create-container {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 50%;
+    margin-top: 15px;
+}
+
+#bucketlist-create-container form{
+    margin-bottom: 20px;
+}
+
+label{
+    color: #8F8F8F;
+    font-weight: 200;
+    font-family: 'Raleway', Roboto, "Helvetica Neue", sans-serif;
+}
+
+.new-bucketlist-name{
+    width: 20.5em;
+}
+.new-bucketlist-name, .new-bucketlist-submit, .add-bucketlist  {
+    border-radius: 100px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    background: white;
+    padding-left: 10px;
+    transition: all 0.30s ease-in-out;
+    font-family: 'Raleway', Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+}
+
+.new-bucketlist-name:focus{
+    border: 1px solid azure;
+    box-shadow: 0px 1px 5px 2px rgba(0,0,0,0.1);
+}
+.new-bucketlist-submit, .add-bucketlist{
+    width: 2em;
+    height: 2em;
+    background-image: url("assets/plus-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.new-bucketlist-submit:hover{
+    border-color:#69E9CD
+}
+
+.add-bucketlist {
+    width: 3em;
+    height: 3em;
+    box-shadow: 0 20px 20px rgba(0,0,0,.25);
+    background-size: 30px 30px;
+    opacity: 0.8;
+}
+
+.add-bucketlist:hover {
+    opacity: 1;
+}

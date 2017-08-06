@@ -1,0 +1,65 @@
+:host {
+  display: block;
+  padding: 0 16px;
+}
+
+input {
+  width: 250px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0 0 0 8px;
+}
+
+.splash {
+  min-height: 100%;
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: url('assets/splash.jpg')
+}
+
+.splash .content {
+  transform: translate(0, 80%);
+}
+
+.splash .title{
+  font-family: Audiowide;
+  font-size: 80px;
+  color: #69E9CD;
+  text-align: center;
+}
+
+.splash p{
+  color: white;
+  font-family: Raleway;
+  font-weight: 200;
+  font-size: 20px;
+  text-align: center;
+}
+
+.splash-btn{
+  border-radius: 100px;
+  padding: 5px;
+  background: transparent;
+  font-family: 'Quattrocento Sans', Roboto, "Helvetica Neue", sans-serif;
+  color: white;
+  padding: 20px 40px 20px 40px;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 15px;
+  transition: all 0.30s ease-in-out;
+}
+
+.splash-btn:hover{
+  background-color: rgba(105, 233, 205, 0.4);
+  border-color: #69E9CD;
+}
+
+.splash-btn-container{
+  display: table;
+  margin: 0 auto;
+}

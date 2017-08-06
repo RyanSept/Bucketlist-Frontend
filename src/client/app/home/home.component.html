@@ -1,0 +1,12 @@
+<bucketlists *ngIf='this.auth_service.isAuthenticated()'></bucketlists>
+
+<div *ngIf='!this.auth_service.isAuthenticated()' class="splash">
+  <div class="content center-block">
+    <h1 class="title">Prue</h1>
+    <p>Find, dream, explore</p>
+    <div class="splash-btn-container">
+      <a [routerLink]="['/auth/register']" class="splash-btn btn btn-default center-block ">SIGN UP</a>
+      <a [routerLink]="['/auth/login']" class="splash-btn btn btn-default center-block ">LOG IN</a>
+    </div>
+  </div>
+</div>

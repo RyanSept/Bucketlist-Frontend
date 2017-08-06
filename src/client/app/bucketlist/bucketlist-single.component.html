@@ -1,0 +1,18 @@
+<div class="bucketlist-title">
+    <label for="bucketlistName">NAME</label>
+    <input [value]='bucketlist.name' [(ngModel)]="bucketlistName" name="bucketlistName" type="text" (blur)="saveBucketlist()" class="bucketlist-name">
+    <span class="glyphicon glyphicon-trash delete" title="Delete this bucketlist" (click)="deleteBucketlist()"></span>
+    <button class="btn btn-default add-item" data-toggle="collapse" data-target="#item-create-container" aria-expanded="true" title="Create a bucketlist item"></button>
+</div>
+
+<div class="container-fluid bucketlist">
+    <div id="item-create-container" class="collapse" aria-expanded="true">
+        <h2 style="font-size: 20px; margin-bottom: 15px; color:#964886">Create a new item for this bucketlist</h2>
+        <form [formGroup]="newItem" (submit)="createBucketlistItem()">
+            <label for="new-item-name">ITEM NAME</label>
+            <input formControlName="itemName" class="new-item-name" name="new-item-name" type="text"/>
+            <button class="btn btn-default new-item-submit" type="submit"></button>
+        </form>
+    </div>
+    <bucketlist-item *ngFor='let bucketlistItem of bucketlist.items' [item]='bucketlistItem' [bucketlistID]='bucketlist.id'></bucketlist-item>
+</div>

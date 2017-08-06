@@ -1,0 +1,24 @@
+<div class="container center-block register-container">
+    <h1 style="margin: 0; margin-bottom:10px;">Register</h1>
+    <form (submit)='register()' [formGroup]="user">
+        <label for="first_name">First name</label>
+        <input type="text" formControlName="first_name" placeholder="First Name">
+
+        <label for="last_name">Last name</label>
+        <input type="text" formControlName="last_name" placeholder="Last Name">
+
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" placeholder="Email">
+        <div class="alert alert-danger" *ngIf="user.get('email').hasError('emailInvalid') && user.get('email').touched">The email is invalid.</div>
+
+        <div formGroupName="passwords">
+            <label for="password">Password</label>
+            <input type="password" formControlName="password" placeholder="Password">
+
+            <label for="password">Confirm password</label>
+            <input type="password" formControlName="confirm_password" placeholder="Password">
+            <div class="alert alert-danger" *ngIf="user.get('passwords').hasError('passwordInvalid') && user.get('passwords').get('password').touched">The passwords do not match.</div>
+            <input type="submit" class="btn btn-default" name="Sign up">
+        </div>
+    </form>
+</div>

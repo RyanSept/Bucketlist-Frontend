@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-left">
+      <p class="logo">P</p>
+    </div>
+    <div class="navbar-right">
+      <div class="inner-addon right-addon">
+        <input class="search-input" [(ngModel)]="queryString" (keyup)="search()" (blur)="search()" type="text"/>
+        <span class="glyphicon glyphicon-search search-icon"></span>
+      </div>
+      <span class="glyphicon glyphicon-menu-hamburger nav-menu-button" onclick="document.getElementById('side-nav').style.width = '250px'; document.getElementById('side-nav').style.right = '0';"></span>
+    </div>
+  </div>
+</nav>
+
+<div id="side-nav" class="side-nav">
+  <span href="javascript:void(0)" class="close-btn" title="Menu" onclick=" document.getElementById('side-nav').style.width = '0'; document.getElementById('side-nav').style.right = '-20px';">&times;</span>
+  <span class="glyphicon glyphicon-user user-icon"></span>
+  <p class="user-email">{{this.userEmail}}</p>
+  <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" style="margin-top:20px;">HOME</a>
+  <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+  <a *ngIf="!this.auth_service.isAuthenticated()" [routerLink]="['/auth/login']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">LOGIN</a>
+  <a *ngIf="!this.auth_service.isAuthenticated()" [routerLink]="['/auth/register']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">REGISTER</a>
+  <a *ngIf="this.auth_service.isAuthenticated()" (click)="this.logout()">LOGOUT</a>
+</div>
+

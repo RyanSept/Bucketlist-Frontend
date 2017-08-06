@@ -1,0 +1,10 @@
+<div class="container center-block login-container">
+    <h1 style="margin: 0; margin-bottom:10px;">Login</h1>
+    <form (submit)='login()' [formGroup]="user">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username"  placeholder="Username">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" placeholder="Password">
+        <input type="submit" class="btn btn-default">
+    </form>
+</div>

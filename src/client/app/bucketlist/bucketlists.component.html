@@ -1,0 +1,23 @@
+<div class="container-fluid before-bucketlists">
+    <h1>{{ bucketlistsTitle }}</h1>
+    <div class="pull-right" style="padding:10px">
+        <button class="btn btn-default add-bucketlist" data-toggle="collapse" data-target="#bucketlist-create-container" aria-expanded="true" title="Create a new bucketlist."></button>
+    </div>
+    <div id="bucketlist-create-container" class="collapse"aria-expanded="true">
+        <h2 style="font-size: 20px; margin-bottom: 15px; color:#964886">Create a new bucketlist</h2>
+        <form (submit)="createBucketlist()" [formGroup]="newBucketlist">
+            <label for="new-bucketlist-name">NAME</label>
+            <input class="new-bucketlist-name" name='new-bucketlist-name' formControlName="bucketlistName" type="text"/>
+            <button class="btn btn-default new-bucketlist-submit" type="submit"></button>
+        </form>
+    </div>
+</div>
+<div  class="container-fluid bucketlists">
+    <div *ngFor='let bucketlist of bucketlists | bucketlistsSearch: queryString' class="col-sm-3 bucketlist" [routerLink]="['/bucketlists', bucketlist.id]"  >
+        <p class="bucketlist-name">{{ bucketlist.name }}</p>
+        <p class="bucketlist-date">{{ bucketlist.date_created }}</p>
+        <p class="bucketlist-item-count">{{ bucketlist.items.length }}</p>
+        <p class="item-count-title" style="font-size:14px">items</p>
+    </div>
+</div>
+

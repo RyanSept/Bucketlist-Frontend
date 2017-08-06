@@ -1,0 +1,20 @@
+<div *ngIf="this.item" class="col-sm-4 bucketlist-item">
+    <span class="glyphicon glyphicon-trash delete pull-right" title="Delete this item" (click)="deleteBucketlistItem()"></span>
+    <div class="center-block">
+        <input name='bucketlistItemInput' title="Item name" [(ngModel)]="itemName" [value]='this.item.name' (blur)="saveBucketlistItem()" type="text" class="item-name"/>
+        <p class="item-date" title="Last modified.">{{ this.item.date_modified }}</p>
+            <p
+            *ngIf='this.item.done===true'
+            class="item-done" 
+            title="Item completed."
+            (click)="saveBucketlistItem(done='false')">
+             ✓
+            </p>
+            <p
+            *ngIf='this.item.done===false'
+            class="item-not-done" 
+            (click)="saveBucketlistItem(done='true')">
+            ×
+            </p>
+    </div>
+</div>

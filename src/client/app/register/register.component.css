@@ -1,0 +1,56 @@
+body {
+    box-shadow: 0px 2px 122px lightgray inset;
+}
+.register-container{
+    width: 40%;
+    padding-top: 25px;
+    background: white;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    box-shadow: 0 1px 3px rgba(0,0,0,.13);
+    margin-bottom: 30px;
+}
+
+.register-container label{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 200;
+}
+
+.register-container input{  
+    margin-bottom: 20px;
+    padding: 5px;
+    background: transparent;
+    padding-left: 10px;
+    transition: border-bottom-width 0.3s;
+    font-family: 'Quattrocento Sans', Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    transition: all 0.40s ease-in-out;
+    display: block
+}
+.register-container input[type="submit"]{
+    border-radius: 100px;
+}
+.register-container input[type="submit"]:hover{
+    border: 1px solid peachpuff;
+}
+.register-container input[type="text"], .register-container input[type="password"]{
+    border-radius: 100px;
+    width: 90%;
+    border: 0px;
+    border: 1px solid #69E9CD;
+}
+
+.register-container input[type="text"]:focus, .register-container input[type="password"]:focus{
+    box-shadow: 0 0 2px #60d4bb;
+    border: 1px solid #60d4bb;
+}
+
+.register-container h1, .register-container p{
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.alert {
+    padding: 4px;
+    margin-bottom: 10px;
+}
