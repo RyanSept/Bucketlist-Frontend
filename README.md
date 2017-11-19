@@ -1,5 +1,6 @@
 # Prue Bucketlists
-This is the frontend interface for the bucketlist api.
+This is the frontend interface for the bucketlist api. Designing this was really fun and I learnt a lot
+
 Link: https://prue-front.herokuapp.com/
 
 Prue Landing
